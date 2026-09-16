@@ -1,0 +1,68 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  border-radius: var(--radius-md);
+  border: none;
+  outline: none;
+  background-color: var(--color-primary);
+  padding: var(--spacing-lg) var(--spacing-md);
+  color: var(--color-text-inverse);
+  transition: background-color 0.3s ease-in-out;
+  font-size: var(--font-size-subtitle);
+  font-weight: var(--font-weight-regular);
+  cursor: pointer;
+  width: 230px;
+}
+
+.button:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  border: none;
+  outline: none;
+  background-color: var(--color-primary);
+  padding: var(--spacing-sm);
+  color: var(--color-text-inverse);
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.danger {
+  color: var(--color-danger);
+  background-color: transparent;
+}
+
+.danger:hover {
+  background-color: var(--color-danger-hover);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.success:hover {
+  background-color: var(--color-success-hover);
+}
+
+.warning {
+  color: var(--color-warning);
+}
+
+.warning:hover {
+  background-color: var(--color-warning-hover);
+}
+
+.info {
+  color: var(--color-info);
+}
+
+.info:hover {
+  background-color: var(--color-info-hover);
+}

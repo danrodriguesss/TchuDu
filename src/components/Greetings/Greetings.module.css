@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.greeting, .subtitle {
+    font-family: var(--heading-font);
+    color: var(--color-text);
+}
+
+.greeting {
+    font-size: var(--font-size-logo);
+    font-weight: var(--font-weight-bold);
+    line-height: 0.8;
+}
+
+.subtitle {
+    font-size: var(--font-size-subtitle);
+}

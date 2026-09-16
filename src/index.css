@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Poppins", sans-serif;
+  color: var(--color-text);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --heading-font: "Rethink Sans", sans-serif;
+
+  /* Colors */
+  --color-primary: #20657a;
+  --color-primary-hover: #1c586a;
+  --color-secondary: #c56d15;
+  --color-background: #f5f5f5;
+  --color-surface: #fcfcfc;
+  --color-surface-hover: #f7f7f7;
+  --color-text: #0B1C30;
+  --color-text-inverse: #ffffff;
+  --color-danger: #e74c3c;
+  --color-success: #2ecc71;
+  --color-warning: #f1c40f;
+  --color-info: #3498db;
+  --color-danger-hover: #e74d3c2d;
+  --color-success-hover: #2ecc712d;
+  --color-warning-hover: #f1c40f2d;
+  --color-info-hover: #3498db2d;
+  --color-border: #dddddd;
+  --color-task-done: #868686;
+
+  /* Spacing */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 40px;
+
+  /* Icon Sizes */
+  --icon-size-sm: 16px;
+  --icon-size-md: 20px;
+  --icon-size-lg: 24px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* Typography */
+  --font-size-caption: 12px;
+  --font-size-body: 16px;
+  --font-size-subtitle: 18px;
+  --font-size-title: 24px;
+  --font-size-heading: 32px;
+  --font-size-logo: 42px;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 800;
+}
+
+body {
+  background-color: var(--color-background);
+}
