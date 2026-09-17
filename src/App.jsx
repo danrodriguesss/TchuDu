@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./App.module.css";
 import SideBar from "./components/SideBar";
 import Greetings from "./components/Greetings";
@@ -6,16 +6,17 @@ import NewTaskContainer from "./components/NewTaskContainer";
 import TaskList from "./components/TaskList";
 
 function App() {
-  const [tasks, setTasks] = useState(
-    localStorage.getItem("tasks")
-      ? JSON.parse(localStorage.getItem("tasks"))
-      : [],
-  );
-  localStorage.setItem("tasks", JSON.stringify(tasks));
+  const [tasks, setTasks] = useState(() => {
+    const savedTasks = localStorage.getItem("tasks");
+    return savedTasks ? JSON.parse(savedTasks) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const addCreatedTask = (newTask) => {
     setTasks((prevTasks) => [newTask, ...prevTasks]);
-    localStorage.setItem("tasks", JSON.stringify([newTask, ...tasks]));
   };
 
   const onDelete = (taskId) => {
@@ -29,8 +30,6 @@ function App() {
       ),
     );
   };
-
-  console.log(tasks);
 
   return (
     <main className={styles.container}>
