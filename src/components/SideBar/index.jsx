@@ -6,7 +6,7 @@ const SideBar = () => {
     <aside className={styles.sideBar}>
       <header className={styles.header}>
         <div className={styles.logoContainer}>
-          <PiCheckFat size={40} color={{ color: "inherit" }} />
+          <PiCheckFat size={42} color={{ color: "inherit" }} />
           <h1 className={styles.logoName}>TchuDu!</h1>
         </div>
       </header>

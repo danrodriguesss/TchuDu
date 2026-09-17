@@ -34,6 +34,17 @@
   cursor: pointer;
 }
 
+.iconButton svg {
+  animation: spinFade 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.outlined {
+  color: var(--color-text);
+  background-color: transparent;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+}
+
 .danger {
   color: var(--color-danger);
   background-color: transparent;
@@ -65,4 +76,16 @@
 
 .info:hover {
   background-color: var(--color-info-hover);
+}
+
+/* Cria a animação de girar, crescer e aparecer */
+@keyframes spinFade {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
 }

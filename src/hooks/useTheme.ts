@@ -8,7 +8,7 @@ export const useTheme = () => {
 
     // Fallback para preferência do SO
     const prefersDark = window.matchMedia(
-      "(prefers-color-schema: dark)",
+      "(prefers-color-scheme: dark)",
     ).matches;
     return prefersDark ? "dark" : "light";
   });

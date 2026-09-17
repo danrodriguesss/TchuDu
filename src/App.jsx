@@ -4,8 +4,11 @@ import SideBar from "./components/SideBar";
 import Greetings from "./components/Greetings";
 import NewTaskContainer from "./components/NewTaskContainer";
 import TaskList from "./components/TaskList";
+import { useTheme } from "./hooks/useTheme";
 
 function App() {
+  const { theme, toggleTheme } = useTheme();
+
   const [tasks, setTasks] = useState(() => {
     const savedTasks = localStorage.getItem("tasks");
     return savedTasks ? JSON.parse(savedTasks) : [];
@@ -35,7 +38,7 @@ function App() {
     <main className={styles.container}>
       <SideBar />
       <section className={styles.managerContainer}>
-        <Greetings />
+        <Greetings theme={theme} toggleTheme={toggleTheme} />
         <NewTaskContainer addCreatedTask={addCreatedTask} />
         <TaskList tasks={tasks} onDelete={onDelete} onTaskDone={onTaskDone} />
       </section>
