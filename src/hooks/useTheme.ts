@@ -18,6 +18,13 @@ export const useTheme = () => {
     // Injeta o atributo na tag <html> (ex: <html data-theme="dark">)
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
+
+    // Habilita a animação CSS apenas após a primeira renderização
+    const timeout = setTimeout(() => {
+      document.documentElement.classList.add("theme-transition");
+    }, 0);
+
+    return () => clearTimeout(timeout);
   }, [theme]);
 
   // Alternador de tema
