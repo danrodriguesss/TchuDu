@@ -7,3 +7,28 @@
     overflow-y: auto;
     padding-right: var(--spacing-sm);
 }
+
+.noTasksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.messageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.messageText {
+    color: var(--color-text);
+    font-size: var(--font-size-subtitle);
+    font-weight: var(--font-weight-light);
+}
+
+.noTasksImage {
+    width: 600px;
+}
